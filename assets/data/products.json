@@ -1,0 +1,92 @@
+[
+  {
+    "id": 101,
+    "status": "active",
+    "date_created": "2024-12-01",
+    "name": "Термокружка",
+    "category": "Аксессуары",
+    "price": 1190,
+    "stock": 34
+  },
+  {
+    "id": 102,
+    "status": "inactive",
+    "date_created": "2023-08-15",
+    "name": "Беспроводные наушники",
+    "category": "Электроника",
+    "price": 4990,
+    "stock": 0
+  },
+  {
+    "id": 103,
+    "status": "active",
+    "date_created": "2024-01-10",
+    "name": "Плед флисовый",
+    "category": "Дом и уют",
+    "price": 890,
+    "stock": 57
+  },
+  {
+    "id": 104,
+    "status": "draft",
+    "date_created": "2023-12-05",
+    "name": "Геймерская мышь",
+    "category": "Комплектующие",
+    "price": 2790,
+    "stock": 15
+  },
+  {
+    "id": 105,
+    "status": "active",
+    "date_created": "2024-02-22",
+    "name": "Книга: Искусство Войны",
+    "category": "Книги",
+    "price": 620,
+    "stock": 120
+  },
+  {
+    "id": 106,
+    "status": "inactive",
+    "date_created": "2022-11-30",
+    "name": "Термобельё зимнее",
+    "category": "Одежда",
+    "price": 3290,
+    "stock": 12
+  },
+  {
+    "id": 107,
+    "status": "active",
+    "date_created": "2024-03-12",
+    "name": "Электрочайник",
+    "category": "Бытовая техника",
+    "price": 2290,
+    "stock": 43
+  },
+  {
+    "id": 108,
+    "status": "active",
+    "date_created": "2023-10-01",
+    "name": "Подставка под ноутбук",
+    "category": "Офис",
+    "price": 1390,
+    "stock": 0
+  },
+  {
+    "id": 109,
+    "status": "draft",
+    "date_created": "2024-04-05",
+    "name": "Пауэрбанк 20000 mAh",
+    "category": "Электроника",
+    "price": 3590,
+    "stock": 89
+  },
+  {
+    "id": 110,
+    "status": "active",
+    "date_created": "2023-06-17",
+    "name": "Маска для сна",
+    "category": "Аксессуары",
+    "price": 490,
+    "stock": 200
+  }
+]
