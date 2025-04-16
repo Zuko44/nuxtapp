@@ -10,27 +10,27 @@ Nuxt App — Авторизация и Режим Сессии
 
 ## Авторизация
 
-Логин происходит через users.json (/data/users.json в preview).
+Логин происходит через `users.json (/data/users.json в preview)`.
 
-Пароль хешируется через MD5 (библиотека crypto-js).
+Пароль хешируется через `MD5` (библиотека `crypto-js`).
 
 После успешного входа:
 
-localStorage.setItem('userSession', JSON.stringify(user))
+`localStorage.setItem('userSession', JSON.stringify(user))`
 
-Данные пишутся в store (currentUser, isLoggedIn)
+Данные пишутся в `store (currentUser, isLoggedIn)`
 
 ## Выход
 
-Очищается localStorage
+Очищается `localStorage`
 
-store.logout() возвращает пользователя на /login
+`store.logout()` возвращает пользователя на `/login`
 
 ## restoreSession()
 
-Вызывается только на клиенте, в onMounted()
+Вызывается только на клиенте, в `onMounted()`
 
-Проверяет localStorage.getItem('userSession')
+Проверяет `localStorage.getItem('userSession')`
 
 Если есть — парсит и записывает в store
 
@@ -45,31 +45,31 @@ store.logout() возвращает пользователя на /login
 
 ## Почему не middleware
 
-Nuxt запускает middleware до mounted() → store ещё не знает о сессии
+Nuxt запускает `middleware` до `mounted() → store` ещё не знает о сессии
 
-Даже глобальные middleware не видят localStorage
+Даже глобальные `middleware` не видят `localStorage`
 
-В preview SSR-контекст не даёт прокинуть cookies
+В preview SSR-контекст не даёт прокинуть `cookies`
 
-Поэтому лучшее решение: не использовать middleware вообще
+Поэтому лучшее решение: не использовать `middleware` вообще
 
 ## Preview Mode
 
-Команда npm run preview (или nuxi preview) запускает production-like сервер
+Команда `npm run preview` (или `nuxi preview`) запускает `production-like` сервер
 
-Там не работают process.client и useCookie() как на dev
+Там не работают `process.client` и `useCookie()` как на `dev`
 
-localStorage и restoreSession() — самые стабильные
+`localStorage` и `restoreSession()` — самые стабильные
 
 ## Всё работает, если:
 
-Нет definePageMeta({ middleware: '...' })
+Нет `definePageMeta({ middleware: '...' })`
 
-Нет middleware/*.ts, вызывающих редирект
+Нет `middleware/*.ts`, вызывающих редирект
 
-Есть restoreSession() в onMounted() нужных страниц
+Есть `restoreSession()` в `onMounted()` нужных страниц
 
-Данные читаются из localStorage
+Данные читаются из `localStorage`
 
 ## Результат
 
@@ -79,6 +79,6 @@ localStorage и restoreSession() — самые стабильные
 
 Перезапуск → не выкидывает
 
-Нет middleware → нет неожиданных редиректов
+Нет `middleware` → нет неожиданных редиректов
 
 Поведение стабильное и прозрачное
