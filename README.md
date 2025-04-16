@@ -34,14 +34,14 @@ store.logout() возвращает пользователя на /login
 
 Если есть — парсит и записывает в store
 
-`onMounted(() => {
-  const userStore = useUserStore()
-  userStore.restoreSession()
+`onMounted(() => {`
+  `const userStore = useUserStore()`
+  `userStore.restoreSession()`
 
-  if (!userStore.isLoggedIn) {
-    return navigateTo('/login')
-  }
-})`
+  `if (!userStore.isLoggedIn) {`
+    `return navigateTo('/login')`
+  `}`
+`})`
 
 ## Почему не middleware
 
